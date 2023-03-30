@@ -1,14 +1,14 @@
 <?php
 include("../models/conexao.php");
 include("blades/header.php");
-?>
 
-<div class="container p-5 mt-5 border bg-white">
-    
-<?php
-$query = mysqli_query($conexao, "select * from alunos where codigo = 4");
+$varIda = $_GET["ida"];
+$query = mysqli_query($conexao, "SELECT * FROM alunos WHERE codigo = $varIda");
 $exibe = mysqli_fetch_array($query);
 ?>
+
+
+<div class="container p-5 mt-5 border bg-white">
 
     <form action="../controllers/atualizarAluno.php" method="post">
         <input class="form-control" type="hidden" name="alunoCodigo" value="<?php echo $exibe[0]?>"><br>
@@ -16,7 +16,7 @@ $exibe = mysqli_fetch_array($query);
         <input class="form-control" type="text" name="alunoNome" value="<?php echo $exibe[1]?>"><br>
         <label class="form-label" ><b>Cidade</b></label><br>
         <input class="form-control" type="text" name="alunoCidade" value="<?php echo $exibe[2]?>"><br>
-        <label  class="form-label" ><b>Sexo</b></label>
+        <label  class="form-label"><b>Sexo</b></label>
         <br>
         Masculino <input type="radio" name="sexo" value="m" <?php echo ($exibe[3] =="m")?"checked":""; ?>> <br>
         Feminino <input type="radio" name="sexo" value="f" <?php echo ($exibe[3] =="f")?"checked":""; ?>> <br>

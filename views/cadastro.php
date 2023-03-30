@@ -13,9 +13,9 @@ include("blades/header.php")
     <div class="my-3 row">
     <label class="form-label"><b>Sexo</b></label>
         <div class="my-3 col">
-            <input class="form-check-input" type="radio" name="alunoSexo" value="m">
+            <input class="form-check-input" type="radio" name="sexo" value="m">
                 <label class="form-label">Masculino</label>
-            <input class="form-check-input" type="radio" name="alunoSexo" value="f">
+            <input class="form-check-input" type="radio" name="sexo" value="f">
             <label class="form-label">Feminino</label>
         </div>    
     </div>

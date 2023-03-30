@@ -36,7 +36,7 @@ if(empty($_POST["buscar"])){
 
 <tr>
     <td><?php echo strtoupper($vogal) . " alun". $vogal?> se chama <b><?php echo $exibe[1]?></b> e mora na cidade de <b><?php echo $exibe[2] ?></td>
-    <td><a class="btn btn-info" href="views/cadastroAtualiza.php">Editar</a></td>
+    <td><a class="btn btn-info" href="views/cadastroAtualiza.php?ida=<?php echo $exibe[0]?>">Editar</a></td>
     <td><a class="btn btn-danger" href="controllers/deletarAluno.php?ida=<?php echo $exibe[0]?>">Excluir</a></td>
 </tr>
     
